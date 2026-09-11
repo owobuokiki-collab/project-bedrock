@@ -1,6 +1,6 @@
 resource "aws_cloudwatch_log_metric_filter" "retail_app_errors" {
   name           = "RetailAppErrorCount"
-  pattern        = "{ $.kubernetes.namespace_name = \"retail-app\" && $.log = \"*ERROR*\" }"
+  pattern        = "ERROR"
   log_group_name = "/aws/containerinsights/project-bedrock-cluster/application"
 
   metric_transformation {
