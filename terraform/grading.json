@@ -1,0 +1,42 @@
+{
+  "assets_bucket_name": {
+    "sensitive": false,
+    "type": "string",
+    "value": "bedrock-assets-4rl5um"
+  },
+  "carts_table_name": {
+    "sensitive": false,
+    "type": "string",
+    "value": "project-bedrock-carts"
+  },
+  "catalog_db_endpoint": {
+    "sensitive": false,
+    "type": "string",
+    "value": "terraform-20260911101957345900000014.cwncyykey4lm.us-east-1.rds.amazonaws.com:3306"
+  },
+  "cluster_endpoint": {
+    "sensitive": false,
+    "type": "string",
+    "value": "https://05F4703CF195B8ECFCBA43A72B46CE21.gr7.us-east-1.eks.amazonaws.com"
+  },
+  "cluster_name": {
+    "sensitive": false,
+    "type": "string",
+    "value": "project-bedrock-cluster"
+  },
+  "orders_db_endpoint": {
+    "sensitive": false,
+    "type": "string",
+    "value": "terraform-20260911101957395100000015.cwncyykey4lm.us-east-1.rds.amazonaws.com:5432"
+  },
+  "region": {
+    "sensitive": false,
+    "type": "string",
+    "value": "us-east-1"
+  },
+  "vpc_id": {
+    "sensitive": false,
+    "type": "string",
+    "value": "vpc-05bc307445452ca6d"
+  }
+}
