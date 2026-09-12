@@ -13,6 +13,9 @@ permissions:
   contents: read
   pull-requests: write
 
+env:
+  TF_IN_AUTOMATION: true
+
 jobs:
   terraform:
     name: "Terraform"
@@ -38,7 +41,7 @@ jobs:
           aws-region: us-east-1
 
       - name: Terraform Init
-        run: terraform init
+        run: terraform init -input=false
 
       - name: Terraform Format Check
         run: terraform fmt -check
@@ -49,9 +52,9 @@ jobs:
       - name: Terraform Plan
         id: plan
         if: github.event_name == 'pull_request'
-        run: terraform plan -no-color
+        run: terraform plan -no-color -input=false
         continue-on-error: true
 
       - name: Terraform Apply
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-        run: terraform apply -auto-approve
+        run: terraform apply -auto-approve -input=false
