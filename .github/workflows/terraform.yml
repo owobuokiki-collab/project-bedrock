@@ -15,6 +15,8 @@ permissions:
 
 env:
   TF_IN_AUTOMATION: true
+  TF_VAR_student_id: "alt-soe-tin-025-0256" # Replace with your exact student ID
+  TF_VAR_alert_email: "your-email@example.com" # Replace with your email address
 
 jobs:
   terraform:
